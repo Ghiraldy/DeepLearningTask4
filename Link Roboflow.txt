@@ -1,1 +1,9 @@
 https://app.roboflow.com/object-detection-yolo-lhpzm/alat-tulis-kantor-vpsvz/models
+
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="uVmrMwxIps4i5hX7sMZL")
+project = rf.workspace("object-detection-yolo-lhpzm").project("alat-tulis-kantor-vpsvz")
+version = project.version(1)
+dataset = version.download("yolov8")
